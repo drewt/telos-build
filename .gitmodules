@@ -1,0 +1,12 @@
+[submodule "binutils"]
+	path = binutils
+	url = https://github.com/drewt/telos-binutils
+[submodule "gcc"]
+	path = gcc
+	url = https://github.com/drewt/telos-gcc
+[submodule "libc"]
+	path = libc
+	url = https://github.com/drewt/telos-libc
+[submodule "kernel"]
+	path = kernel
+	url = https://github.com/drewt/Telos
