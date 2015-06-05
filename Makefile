@@ -13,7 +13,7 @@ binutils_built = $(bindir)/i386-telos-ld
 toolchain_built = $(binuitls_built) $(gcc_built)
 libc_built = $(sysroot)/usr/lib/libc.a
 kernel_built = kernel/kernel.bin
-initrd_built = kernel/initrd.img
+initrd_built = initrd/initrd.img
 
 all: kernel libc
 
@@ -57,7 +57,7 @@ $(kernel_built): $(toolchain_built)
 # initrd depends on toolchain and libc, but we don't specify them here to
 # prevent building them as root
 $(initrd_built):
-	export PATH="$(bindir):$$PATH" && cd kernel && $(MAKE) initrd.img
+	export PATH="$(bindir):$$PATH" && cd initrd && $(MAKE)
 
 binutils-clean:
 	cd build/binutils && $(MAKE) clean
@@ -76,7 +76,7 @@ kernel-clean:
 	rm -f $(kernel_built)
 
 initrd-clean:
-	cd kernel && $(MAKE) initrd-clean
+	cd initrd && $(MAKE) clean
 	rm -f $(initrd_built)
 
 clean: binutils-clean gcc-clean libc-clean kernel-clean

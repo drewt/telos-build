@@ -1,4 +1,4 @@
 #!/bin/sh
 
 qemu-system-i386 -m 1024 -no-reboot -no-shutdown -monitor stdio \
-	-kernel kernel/kernel.bin -initrd kernel/initrd.img
+	-kernel kernel/kernel.bin -initrd initrd/initrd.img

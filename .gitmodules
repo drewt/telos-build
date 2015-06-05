@@ -10,3 +10,6 @@
 [submodule "kernel"]
 	path = kernel
 	url = https://github.com/drewt/Telos
+[submodule "initrd"]
+	path = initrd
+	url = https://github.com/drewt/telos-initrd.git
